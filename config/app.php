@@ -138,11 +138,18 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
+         * 3rd Party Service Providers...
+         */
+        'JeroenG\Packager\PackagerServiceProvider',
+
+        /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Laravolt\Votee\VoteeServiceProvider::class,
 
     ],
 
@@ -191,6 +198,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+        'Votee'  => Laravolt\Votee\VoteeFacade::class,
 
     ],
 
