@@ -141,6 +141,10 @@ return [
          * 3rd Party Service Providers...
          */
         'JeroenG\Packager\PackagerServiceProvider',
+        Orchestra\Memory\MemoryServiceProvider::class,
+        Orchestra\View\ViewServiceProvider::class,
+        Orchestra\View\CommandServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -200,7 +204,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
         'Votee'  => Laravolt\Votee\VoteeFacade::class,
-
+        'Theme'  => Orchestra\Support\Facades\Theme::class,
     ],
 
 ];
