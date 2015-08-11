@@ -9,7 +9,9 @@
         "laravel/framework": "5.1.*",
         "jeroen-g/laravel-packager": "^0.2.1",
         "barryvdh/laravel-debugbar": "^2.0",
-        "orchestra/view": "~3.0"
+        "orchestra/view": "~3.0",
+        "caffeinated/menus": "~2.0",
+        "bican/roles": "2.1.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

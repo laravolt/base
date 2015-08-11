@@ -144,7 +144,8 @@ return [
         Orchestra\Memory\MemoryServiceProvider::class,
         Orchestra\View\ViewServiceProvider::class,
         Orchestra\View\CommandServiceProvider::class,
-
+        Bican\Roles\RolesServiceProvider::class,
+        Caffeinated\Menus\MenusServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -205,6 +206,7 @@ return [
 
         'Votee'  => Laravolt\Votee\VoteeFacade::class,
         'Theme'  => Orchestra\Support\Facades\Theme::class,
+        'Menu' => Caffeinated\Menus\Facades\Menu::class,
     ],
 
 ];
