@@ -154,6 +154,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Laravolt\Mural\ServiceProvider::class,
         Laravolt\Votee\VoteeServiceProvider::class,
 
     ],
@@ -205,6 +206,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
         'Votee'  => Laravolt\Votee\VoteeFacade::class,
+        'Mural'  => Laravolt\Mural\Facade::class,
         'Theme'  => Orchestra\Support\Facades\Theme::class,
         'Menu' => Caffeinated\Menus\Facades\Menu::class,
     ],

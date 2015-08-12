@@ -25,6 +25,7 @@
             "database"
         ],
         "psr-4": {
+            "Laravolt\\Mural\\": "packages/Laravolt/Mural/src",
             "App\\": "app/"
         }
     },
