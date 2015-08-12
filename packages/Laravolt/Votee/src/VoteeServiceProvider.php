@@ -30,7 +30,7 @@ class VoteeServiceProvider extends ServiceProvider
         // use this if your package needs a config file
          $this->publishes([
                  __DIR__.'/../config/votee.php' => config_path('votee.php'),
-                 __DIR__.'/../migrations/create_voteable_tables.php' => database_path('migrations/' . date('Y_m_d_His') . '_create_voteable_tables.php'),
+                 __DIR__.'/../migrations/create_voteable_tables.php' => database_path('migrations/' . '2015_08_17_101000_create_voteable_tables.php'),
          ]);
 
         // use the vendor configuration file as fallback
@@ -60,7 +60,7 @@ class VoteeServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerSkeleton();
+        $this->registerVotee();
 
         // use this if your package has a config file
          config([
@@ -68,7 +68,7 @@ class VoteeServiceProvider extends ServiceProvider
          ]);
     }
 
-    private function registerSkeleton()
+    private function registerVotee()
     {
         $this->app->bind('votee',function($app){
             return new Votee($app);
