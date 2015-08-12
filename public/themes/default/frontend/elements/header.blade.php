@@ -7,7 +7,7 @@
             <a href="{{url('/')}}">LARAVOLT</a>
         </div>
 
-        <a href="#" class="item">Konten 1</a>
+        <a href="{{ route('posts.index') }}" class="item">Post</a>
         <a href="#" class="item">Konten 2</a>
 
         <div class="menu right">

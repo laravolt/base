@@ -34,5 +34,5 @@ return [
     |
     |
     */
-    'content_model' => 'App\User'
+    'content_model' => \App\Models\Post::class
 ];

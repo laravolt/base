@@ -11,7 +11,8 @@
         "barryvdh/laravel-debugbar": "^2.0",
         "orchestra/view": "~3.0",
         "caffeinated/menus": "~2.0",
-        "bican/roles": "2.1.*"
+        "bican/roles": "2.1.*",
+        "laravolt/votee": "^1.0@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -24,7 +25,6 @@
             "database"
         ],
         "psr-4": {
-            "Laravolt\\Votee\\": "packages/Laravolt/Votee/src",
             "App\\": "app/"
         }
     },
@@ -53,5 +53,6 @@
     },
     "config": {
         "preferred-install": "dist"
-    }
+    },
+    "minimum-stability": "dev"
 }
