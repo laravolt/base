@@ -12,19 +12,9 @@
 
         <div class="menu right">
             @if(Auth::check())
-                <div class="item">
-                    <a href="{{ route('backend.content.create') }}" class="ui button teal">UPLOAD</a>
-                </div>
-                <a href="{{ route('backend.profile.edit', ['id' => 'me']) }}" class="item">
-                    <img src="{{ Auth::user()->avatar_url }}" class="ui avatar avatar-me image" alt=""/>
+                <a href="#" class="item">
+                    <img src="{{ auth()->user()->avatar_url }}" class="ui avatar avatar-me image" alt=""/>
                 </a>
-                <a href="{{ route('backend.message.index') }}" class="item">
-                    <i class="mail outline icon"></i>
-                    @if($message_count != 0)
-                        <div class="ui red label">{{ $message_count }}</div>
-                    @endif
-                </a>
-                <a href="{{ url('auth/logout') }}" class="item">Logout</a>
             @else
                 <div class="item">
                     <div class="ui buttons">
