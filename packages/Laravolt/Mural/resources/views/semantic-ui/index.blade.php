@@ -7,7 +7,11 @@
     <div class="ui comments mural-list">
         @include('mural::list', ['comments' => $comments])
     </div>
-    <a href="#" data-url="{{ route('mural.fetch', ['commentable_id' => $content->getKey()]) }}" class="ui fluid basic submit button mural-more" data-no-more-content="@lang('mural.no_more_content')">@lang('mural.load_more')</a>
+    @if(!$comments->isEmpty())
+    <a href="#" data-url="{{ route('mural.fetch', ['commentable_id' => $content->getKey(), 'room' => $room]) }}" class="ui fluid basic submit button mural-more" data-no-more-content="@lang('mural.no_more_content')">@lang('mural.load_more')</a>
+    @else
+        <button class="button ui basic fluid disabled">@lang('mural.empty')</button>
+    @endif
 </div>
 
 

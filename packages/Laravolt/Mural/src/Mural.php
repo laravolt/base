@@ -17,12 +17,12 @@ class Mural
         $this->config = config('mural');
     }
 
-    public function render($content)
+    public function render($content, $room = null)
     {
         $content = $this->getContentObject($content);
-        $comments = $content->comments()->latest()->paginate($this->config['per_page']);
+        $comments = $content->comments()->latest()->room($room)->paginate($this->config['per_page']);
 
-        return view("mural::index", compact('content', 'comments'))->render();
+        return view("mural::index", compact('content', 'comments', 'room'))->render();
     }
 
     protected function getContentObject($content)

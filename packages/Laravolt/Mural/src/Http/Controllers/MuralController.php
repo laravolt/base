@@ -20,7 +20,7 @@ class MuralController extends Controller
     public function fetch(Request $request)
     {
         $content = Post::findOrFail($request->get('commentable_id'));
-        $comments = $content->comments()->latest($request->get('last_id'))->paginate(config('mural.per_page'));
+        $comments = $content->comments()->latest($request->get('last_id'))->room($request->get('room'))->paginate(config('mural.per_page'));
 
         return view('mural::list', compact('comments', 'content'));
     }
@@ -29,7 +29,7 @@ class MuralController extends Controller
     {
         $content = Post::findOrFail($request->get('commentable_id'));
 
-        $comment = Comment::create(['body' => $request['body']]);
+        $comment = Comment::create(['body' => $request->get('body'), 'room' => $request->get('room')]);
         $comment->author()->associate(auth()->user());
         $content->comments()->save($comment);
 

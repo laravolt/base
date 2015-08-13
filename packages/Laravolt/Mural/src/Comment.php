@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
 
-    protected $fillable = ['body'];
+    protected $fillable = ['body', 'room'];
 
     public function author()
     {
@@ -19,6 +19,17 @@ class Comment extends Model
 
         if($beforeId) {
             $query->where('id', '<', $beforeId);
+        }
+
+        return $query;
+    }
+
+    public function scopeRoom($query, $room)
+    {
+        if($room) {
+            $query->whereRoom($room);
+        } else {
+            $query->whereNull('room');
         }
 
         return $query;
