@@ -1,84 +1,77 @@
-<div class="ui segment">
+<div class="ui segment mural-container">
     <div class="column" id="form_comment">
         <h3 class="ui header">@lang('mural.title_with_count', ['count' => $content['comment_count']])</h3>
         @include('mural::form')
     </div>
 
-    <div class="ui comments">
-        <div id="update"></div>
+    <div class="ui comments mural-list">
         @include('mural::list', ['comments' => $comments])
-        <div id="results"></div>
     </div>
-    <button type="submit" id="load_more" class="ui fluid basic submit button" data-no-more-content="@lang('mural.no_more_content')">@lang('mural.load_more')</button>
+    <a href="#" data-url="{{ route('mural.fetch', ['commentable_id' => $content->getKey()]) }}" class="ui fluid basic submit button mural-more" data-no-more-content="@lang('mural.no_more_content')">@lang('mural.load_more')</a>
 </div>
 
 
 <script type="text/javascript">
     $(function(){
         @if(auth()->check())
-        $("#sumbitcomment").click(function(event) {
-            event.preventDefault();
-            $('#sumbitcomment').addClass('loading');
+        $('.mural-container').on('submit', '.mural-form', function(e) {
+            e.preventDefault();
+            var form = $(e.currentTarget);
+            var btn = form.find('button[type=submit]');
+            var commentContainer = $(e.delegateTarget).find('.mural-list');
 
-            var description = $("#description").val();
-
-            $('#sumbitcomment').addClass('loading');
-
-            if(description=='')
-            {
-                alert('Please Give Valide Details');
-                $('#sumbitcomment').removeClass('loading');
+            if(btn.hasClass('disabled')) {
+                return false;
             }
-            else
-            {
-                $.ajax({
 
-                    type: "POST",
-                    url: "{{ route("mural.store") }}",
-                    data: {
-                        'body': $("#description").val(),
-                        'commentable_id': {{ $content->id  }}
-                    },
-                    success: function(html){
-                        $("div#update").prepend(html);
-                        document.getElementById('description').value='';
-                        $("#description").focus();
-                    },
-                    error: function(html){
-                        alert("Tidak bisa comment");
-                    },
-                    complete: function() {
-                        $('#sumbitcomment').removeClass('loading');
-                    }
-                });
-            }
-            return false;
+            btn.addClass('loading disabled');
+
+            $.ajax({
+                type: "POST",
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function(html){
+                    commentContainer.prepend(html);
+                    form.find("input[type=text], textarea").val('');
+                },
+                error: function(){
+                    alert('Something goes wrong');
+                },
+                complete: function() {
+                    btn.removeClass('loading disabled');
+                }
+            });
         });
         @endif
 
-        var track_click = 0;
-        $("#load_more").click(function(event) {
-            track_click = track_click+10;
-            event.preventDefault();
-            $('#load_more').addClass('loading');
+        $(".mural-container").on('click', '.mural-more', function(e) {
+            e.preventDefault();
+            var btn = $(e.currentTarget);
+
+            if(btn.hasClass('disabled')) {
+                return false;
+            }
+
+            btn.addClass('loading disabled');
+            var commentContainer = $(e.delegateTarget).find('.mural-list');
+
             $.ajax({
                 type: "GET",
-                url: "{{ route("mural.fetch") }}",
-                cache: false,
-                data: {
-                    'commentable_id': {{ $content->id  }}
-                },
+                url: btn.data('url'),
+                data: {last_id: commentContainer.find('.comment:last').data('id')},
                 success: function (html) {
                     if(html.length > 0) {
-                        $("div#results").prepend(html);
+                        commentContainer.append(html);
+                        btn.removeClass('disabled');
                     } else {
-                        $("#load_more").attr("disabled", "disabled").html($("#load_more").data('no-more-content'));
+                        btn.attr("disabled", "disabled").html(btn.data('no-more-content'));
                     }
                 },
-                error: function (html) {
+                error: function () {
+                    alert('Something goes wrong');
                 },
                 complete: function() {
-                    $('#load_more').removeClass('loading');
+                    btn.removeClass('loading');
                 }
             });
             return false;

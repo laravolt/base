@@ -20,7 +20,7 @@ class MuralController extends Controller
     public function fetch(Request $request)
     {
         $content = Post::findOrFail($request->get('commentable_id'));
-        $comments = $content->comments()->latest()->paginate(config('mural.per_page'));
+        $comments = $content->comments()->latest($request->get('last_id'))->paginate(config('mural.per_page'));
 
         return view('mural::list', compact('comments', 'content'));
     }

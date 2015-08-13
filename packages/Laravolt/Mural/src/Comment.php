@@ -13,8 +13,14 @@ class Comment extends Model
         return $this->belongsTo(config('auth.model'));
     }
 
-    public function scopeLatest($query)
+    public function scopeLatest($query, $beforeId = null)
     {
-        return $query->orderBy('created_at', 'desc');
+        $query->orderBy('id', 'desc');
+
+        if($beforeId) {
+            $query->where('id', '<', $beforeId);
+        }
+
+        return $query;
     }
 }
