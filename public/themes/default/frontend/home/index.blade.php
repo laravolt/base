@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <div class="ui segment basic center aligned" style="background: #1b1c1d; padding: 100px 0">
+    <div class="ui segment basic center aligned" style="background: #1b1c1d; padding: 100px 0; margin-top: -50px;">
         <div class="ui container">
             <h1 class="ui inverted header" style="font-size: 3em; font-weight: 300">
                 laravolt/base
