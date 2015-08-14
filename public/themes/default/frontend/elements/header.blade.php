@@ -1,4 +1,4 @@
-<div class="ui fixed menu small inverted">
+<div class="ui fixed menu small inverted stackable">
     <div class="ui container">
         <div href="#" class="header item">
             <img class="logo" src="{{ theme_asset('img/logo-laravolt.png') }}">
