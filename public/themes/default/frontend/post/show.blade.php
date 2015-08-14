@@ -4,5 +4,5 @@
 @section('content')
     <h2>{{ $post['title'] }}</h2>
     {!! Votee::render($post) !!}
-    {!! Mural::render($post) !!}
+    {!! Mural::render($post, null, ['readonly' => false]) !!}
 @endsection

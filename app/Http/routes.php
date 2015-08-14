@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('home', function () {
-    return 'Welcome home, ' . auth()->user()->name;
+    return redirect('/');
 });
 
 // Authentication routes...
