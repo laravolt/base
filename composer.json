@@ -12,7 +12,8 @@
         "orchestra/view": "~3.0",
         "caffeinated/menus": "~2.0",
         "bican/roles": "2.1.*",
-        "laravolt/votee": "^1.0@dev"
+        "laravolt/votee": "^1.0@dev",
+        "laravolt/mural": "^1.0@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -25,7 +26,6 @@
             "database"
         ],
         "psr-4": {
-            "Laravolt\\Mural\\": "packages/Laravolt/Mural/src",
             "App\\": "app/"
         }
     },
