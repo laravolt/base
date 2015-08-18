@@ -39,3 +39,9 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 Route::group(['namespace' => 'Frontend'], function($router){
     Route::resource('posts', 'PostController');
 });
+
+
+// ADMIN ROUTES
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function($router){
+    $router->resource('users', 'UserController');
+});
