@@ -1,10 +1,10 @@
 @extends('admin.layouts.main')
 
 @section('content')
-    <div class="ui top attached menu borderless">
+    <div class="ui top attached menu">
         <div class="menu">
-            <div class="item">
-                <p>@lang('users.title_with_count', ['count' => $totalUsers])</p>
+            <div class="item borderless">
+                @lang('users.title_with_count', ['count' => $totalUsers])
             </div>
         </div>
         <div class="right menu">
@@ -49,7 +49,7 @@
         </tbody>
     </table>
     <div class="ui menu attached bottom">
-        <div class="item">
+        <div class="item borderless">
             <small>Menampilkan 1-10 dari total 50</small>
         </div>
         {!! with(new \Laravolt\Support\Pagination\SemanticUiPagination($users))->render('attached bottom right') !!}
