@@ -154,6 +154,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Laravolt\Support\SupportServiceProvider::class,
+
         Laravolt\Mural\ServiceProvider::class,
         Laravolt\Votee\VoteeServiceProvider::class,
 

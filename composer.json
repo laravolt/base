@@ -26,6 +26,7 @@
             "database"
         ],
         "psr-4": {
+            "Laravolt\\Support\\": "packages/Laravolt/Support/src",
             "App\\": "app/"
         }
     },
