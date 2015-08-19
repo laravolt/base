@@ -12,7 +12,16 @@
 @endif
 
 @if (Session::has('flash_notification.message'))
-    <div class="ui message {{ Session::get('flash_notification.level') }}">
-        {{ Session::get('flash_notification.message') }}
+
+    <?php
+        $level = Session::get('flash_notification.level');
+        if($level == 'warning') {
+            $level = 'error';
+        }
+    ?>
+    <div style="" class="ui container">
+        <div class="ui message {{ $level }}" style="text-align: center;">
+            {{ Session::get('flash_notification.message') }}
+        </div>
     </div>
 @endif

@@ -13,8 +13,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
-
+    'debug'           => env('APP_DEBUG', false),
     /*
     |--------------------------------------------------------------------------
     | Application URL
@@ -26,8 +25,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
-
+    'url'             => 'http://localhost',
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -39,8 +37,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
-
+    'timezone'        => 'UTC',
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -52,8 +49,7 @@ return [
     |
     */
 
-    'locale' => 'id',
-
+    'locale'          => 'id',
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -66,7 +62,6 @@ return [
     */
 
     'fallback_locale' => 'en',
-
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
@@ -78,10 +73,8 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'SomeRandomString'),
-
-    'cipher' => 'AES-256-CBC',
-
+    'key'             => env('APP_KEY', 'SomeRandomString'),
+    'cipher'          => 'AES-256-CBC',
     /*
     |--------------------------------------------------------------------------
     | Logging Configuration
@@ -95,8 +88,7 @@ return [
     |
     */
 
-    'log' => 'single',
-
+    'log'             => 'single',
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -108,7 +100,7 @@ return [
     |
     */
 
-    'providers' => [
+    'providers'       => [
 
         /*
          * Laravel Framework Service Providers...
@@ -136,7 +128,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
         /*
          * 3rd Party Service Providers...
          */
@@ -146,21 +137,20 @@ return [
         Orchestra\View\CommandServiceProvider::class,
         Bican\Roles\RolesServiceProvider::class,
         Caffeinated\Menus\MenusServiceProvider::class,
-
+        Laravolt\Mural\ServiceProvider::class,
+        Laravolt\Votee\VoteeServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        //Pingpong\Menus\MenusServiceProvider::class,
         /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
         Laravolt\Support\SupportServiceProvider::class,
 
-        Laravolt\Mural\ServiceProvider::class,
-        Laravolt\Votee\VoteeServiceProvider::class,
 
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
@@ -172,7 +162,7 @@ return [
     |
     */
 
-    'aliases' => [
+    'aliases'         => [
 
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,
@@ -206,10 +196,13 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-
-        'Votee'  => Laravolt\Votee\VoteeFacade::class,
-        'Mural'  => Laravolt\Mural\Facade::class,
-        'Theme'  => Orchestra\Support\Facades\Theme::class,
+        /*
+         * 3rd Party Aliases
+         */
+        'Votee'     => Laravolt\Votee\VoteeFacade::class,
+        'Mural'     => Laravolt\Mural\Facade::class,
+        'Theme'     => Orchestra\Support\Facades\Theme::class,
+        //'Menu'      => Pingpong\Menus\MenuFacade::class,
         'Menu' => Caffeinated\Menus\Facades\Menu::class,
     ],
 

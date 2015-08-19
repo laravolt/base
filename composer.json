@@ -13,6 +13,8 @@
         "caffeinated/menus": "~2.0",
         "bican/roles": "2.1.*",
         "laravolt/votee": "^1.0@dev",
+        "laracasts/flash": "~1.3",
+        "bosnadev/repositories": " 0.*",
         "laravolt/mural": "^1.0@dev"
     },
     "require-dev": {

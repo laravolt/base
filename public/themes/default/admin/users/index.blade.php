@@ -1,10 +1,14 @@
 @extends('admin.layouts.main')
 
+@section('sidemenu')
+    @include('admin.users.menu')
+@endsection
+
 @section('content')
     <div class="ui top attached menu">
         <div class="menu">
             <div class="item borderless">
-                @lang('users.title_with_count', ['count' => $totalUsers])
+                <h4>@lang('users.title_with_count', ['count' => $totalUsers])</h4>
             </div>
         </div>
         <div class="right menu">
@@ -16,11 +20,12 @@
             </div>
         </div>
     </div>
-    <table class="ui compact table attached bottom small">
+    <table class="ui compact table attached bottom small celled">
         <thead>
         <tr>
             <th>@lang('users.name')</th>
             <th>@lang('users.email')</th>
+            <th>@lang('users.roles')</th>
             <th>&nbsp;</th>
         </tr>
         </thead>
@@ -29,20 +34,21 @@
             <tr>
                 <td>{{ $user['name'] }}</td>
                 <td>{{ $user['email'] }}</td>
-                <td style="width: 50px">
-                    <div class="ui icon buttons">
-                        <div class="ui top right pointing dropdown button basic small">
-                            <i class="setting icon"></i>
+                <td>{{ $user['roles_as_text'] }}</td>
+                <td style="width: 100px" class="center aligned">
+                    <a href="{{ route('admin.users.edit') }}" class="ui button basic compact small">@lang('users.edit')</a>
+                    {{--<div class="ui icon buttons">--}}
+                        {{--<div class="ui top right pointing dropdown button basic small">--}}
+                            {{--<i class="setting icon"></i>--}}
 
-                            <div class="menu">
-                                <div class="item">@lang('users.edit_profile')</div>
-                                <div class="item">@lang('users.reset_password')</div>
-                                <div class="divider"></div>
-                                <div class="item"><i class="delete icon"></i> @lang('users.delete')</div>
-                            </div>
-                        </div>
-                    </div>
-
+                            {{--<div class="menu">--}}
+                                {{--<a href="{{ route('admin.users.edit', $user['id']) }}" class="item">@lang('users.edit_profile')</a>--}}
+                                {{--<div class="item">@lang('users.reset_password')</div>--}}
+                                {{--<div class="divider"></div>--}}
+                                {{--<div class="item"><i class="delete icon"></i> @lang('users.delete')</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </td>
             </tr>
         @endforeach

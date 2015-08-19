@@ -2,12 +2,14 @@
 
 @section('body')
 
-    <div class="ui container" style="margin-top: 50px;">
-        <div class="ui grid">
-            <div class="four wide column">
-                @include('admin.elements.sidebar')
+    @include('admin.menus.topbar')
+
+    <div class="ui container">
+        <div class="ui grid" style="margin-top: 38px">
+            <div class="four wide column" style="padding-top: 20px">
+                @yield('sidemenu')
             </div>
-            <div class="twelve wide column">
+            <div class="twelve wide column" style="padding-top: 20px">
                 @include('elements.flash')
                 @yield('content')
             </div>

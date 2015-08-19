@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\User\StoreRequest;
-use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(10);
-        $totalUsers = User::count();
-        return view('admin.users.index', compact('users', 'totalUsers'));
+        return view('admin.home.index');
     }
 
     /**
@@ -30,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        //
     }
 
     /**
@@ -39,7 +35,7 @@ class UserController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(StoreRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -63,9 +59,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
-
-        return view('admin.users.edit', compact('user'));
+        //
     }
 
     /**
@@ -77,11 +71,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);
-        $user->update($request->only('name', 'email'));
-
-        flash()->success('berhasil')->warning('info');
-        return redirect()->back();
+        //
     }
 
     /**
