@@ -141,6 +141,7 @@ return [
         Laravolt\Votee\VoteeServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         //Pingpong\Menus\MenusServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -204,6 +205,8 @@ return [
         'Theme'     => Orchestra\Support\Facades\Theme::class,
         //'Menu'      => Pingpong\Menus\MenuFacade::class,
         'Menu' => Caffeinated\Menus\Facades\Menu::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];

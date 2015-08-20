@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "45c8ed9e1bdd92146e042268ebcb518c",
+    "hash": "2bad8c0b10b19b8a4e04878183e1b864",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -111,12 +111,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Bosnadev/Repositories.git",
-                "reference": "637c7038abd65132cd9a123508cb8117413b0b8e"
+                "reference": "8595460384c198544c3bcfaf1d70fdf877316ff8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Bosnadev/Repositories/zipball/637c7038abd65132cd9a123508cb8117413b0b8e",
-                "reference": "637c7038abd65132cd9a123508cb8117413b0b8e",
+                "url": "https://api.github.com/repos/Bosnadev/Repositories/zipball/8595460384c198544c3bcfaf1d70fdf877316ff8",
+                "reference": "8595460384c198544c3bcfaf1d70fdf877316ff8",
                 "shasum": ""
             },
             "require": {
@@ -140,6 +140,10 @@
                 {
                     "name": "Mirza Pasic",
                     "email": "mirza.pasic@edu.fit.ba"
+                },
+                {
+                    "name": "Maarten Paauw",
+                    "email": "maartenpaauw@gmail.com"
                 }
             ],
             "description": "Laravel Repositories",
@@ -150,7 +154,7 @@
                 "repositories",
                 "repository"
             ],
-            "time": "2015-06-29 10:41:10"
+            "time": "2015-08-19 08:01:07"
         },
         {
             "name": "caffeinated/menus",
@@ -822,12 +826,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "8b0534aaeb80aa11de4f33e279d4fe6ce9eacb2c"
+                "reference": "837080228b4b2ca0492ef5d72ec1211ba57f94e1"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/837080228b4b2ca0492ef5d72ec1211ba57f94e1",
-                "reference": "8b0534aaeb80aa11de4f33e279d4fe6ce9eacb2c",
+                "reference": "837080228b4b2ca0492ef5d72ec1211ba57f94e1",
                 "shasum": ""
             },
             "require": {
@@ -942,7 +946,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-08-18 00:40:00"
+            "time": "2015-08-18 13:40:24"
         },
         {
             "name": "laravelcollective/html",
@@ -1361,6 +1365,50 @@
                 "schedule"
             ],
             "time": "2015-01-11 23:07:46"
+        },
+        {
+            "name": "myclabs/php-enum",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/myclabs/php-enum.git",
+                "reference": "7373882c92fee9cb12ef51160a766445010072b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/myclabs/php-enum/zipball/7373882c92fee9cb12ef51160a766445010072b8",
+                "reference": "7373882c92fee9cb12ef51160a766445010072b8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "squizlabs/php_codesniffer": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MyCLabs\\Enum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP Enum contributors",
+                    "homepage": "https://github.com/myclabs/php-enum/graphs/contributors"
+                }
+            ],
+            "description": "PHP Enum implementation",
+            "homepage": "http://github.com/myclabs/php-enum",
+            "keywords": [
+                "enum"
+            ],
+            "time": "2015-08-06 12:08:39"
         },
         {
             "name": "nesbot/carbon",
@@ -3296,12 +3344,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b"
+                "reference": "92d472f7ac0cd45b7f6d66cb807646432cf89f5d"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/92d472f7ac0cd45b7f6d66cb807646432cf89f5d",
-                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
+                "reference": "92d472f7ac0cd45b7f6d66cb807646432cf89f5d",
                 "shasum": ""
             },
             "require": {
@@ -3337,7 +3385,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-08-16 08:51:00"
+            "time": "2015-08-18 15:47:59"
         },
         {
             "name": "phpunit/phpunit",
@@ -3345,12 +3393,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "650f482841ac845c165e47758617e773e471bbe0"
+                "reference": "9b7417edaf28059ea63d86be941e6004dbfcc0cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/650f482841ac845c165e47758617e773e471bbe0",
-                "reference": "650f482841ac845c165e47758617e773e471bbe0",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9b7417edaf28059ea63d86be941e6004dbfcc0cc",
+                "reference": "9b7417edaf28059ea63d86be941e6004dbfcc0cc",
                 "shasum": ""
             },
             "require": {
@@ -3409,7 +3457,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-18 03:58:29"
+            "time": "2015-08-19 09:20:57"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -3417,12 +3465,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "dccd8011934fba6fb77c7182c74926ad58c9ecd1"
+                "reference": "5e2645ad49d196e020b85598d7c97e482725786a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/dccd8011934fba6fb77c7182c74926ad58c9ecd1",
-                "reference": "dccd8011934fba6fb77c7182c74926ad58c9ecd1",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5e2645ad49d196e020b85598d7c97e482725786a",
+                "reference": "5e2645ad49d196e020b85598d7c97e482725786a",
                 "shasum": ""
             },
             "require": {
@@ -3465,59 +3513,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-08-09 04:15:55"
-        },
-        {
-            "name": "pingpong/menus",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pingpong-labs/menus.git",
-                "reference": "f80764d775d1d7e7bda77359fa5fef32290a4961"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pingpong-labs/menus/zipball/f80764d775d1d7e7bda77359fa5fef32290a4961",
-                "reference": "f80764d775d1d7e7bda77359fa5fef32290a4961",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/config": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "illuminate/view": "5.1.*",
-                "laravelcollective/html": "~5.0",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Pingpong\\Menus\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Pingpong Labs",
-                    "email": "pingpong.labs@gmail.com"
-                }
-            ],
-            "description": "Laravel Menus",
-            "keywords": [
-                "bootstrap",
-                "laravel",
-                "menus",
-                "nav",
-                "navigation",
-                "pingpong"
-            ],
-            "time": "2015-06-29 04:33:33"
+            "time": "2015-08-19 09:14:08"
         },
         {
             "name": "sebastian/comparator",
@@ -3945,7 +3941,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "laravolt/votee": 20,
-        "laravolt/mural": 20
+        "laravolt/mural": 20,
+        "myclabs/php-enum": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

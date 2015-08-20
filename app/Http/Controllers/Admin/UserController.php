@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\User\StoreRequest;
+use App\Repositories\UserRepository;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -12,14 +13,29 @@ use App\Http\Controllers\Controller;
 class UserController extends Controller
 {
     /**
+     * @var UserRepository
+     */
+    private $user;
+
+    /**
+     * UserController constructor.
+     * @param UserRepository $user
+     */
+    public function __construct(UserRepository $user)
+    {
+        $this->user = $user;
+    }
+
+
+    /**
      * Display a listing of the resource.
      *
      * @return Response
      */
     public function index()
     {
-        $users = User::paginate(10);
-        $totalUsers = User::count();
+        $users = $this->user->paginate();
+        $totalUsers = $this->user->count();
         return view('admin.users.index', compact('users', 'totalUsers'));
     }
 
@@ -36,12 +52,22 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param StoreRequest|Request $request
      * @return Response
      */
     public function store(StoreRequest $request)
     {
-        //
+        $user = $this->user->create($request->only('name', 'email', 'password', 'status'));
+
+        if($user) {
+            flash()->success(trans('users.registration.success', ['name' => $user['name']]));
+
+            if($request->has('continue')) {
+                return redirect()->back();
+            }
+
+            return redirect()->route('admin.users.index');
+        }
     }
 
     /**

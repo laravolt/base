@@ -15,7 +15,9 @@
         "laravolt/votee": "^1.0@dev",
         "laracasts/flash": "~1.3",
         "bosnadev/repositories": " 0.*",
-        "laravolt/mural": "^1.0@dev"
+        "laravolt/mural": "^1.0@dev",
+        "myclabs/php-enum": "dev-master",
+        "laravelcollective/html": "5.1.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
