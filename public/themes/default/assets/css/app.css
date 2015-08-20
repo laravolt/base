@@ -1,0 +1,6 @@
+.ui.segment.fitted {
+    padding: 0;
+}
+.ui.segment.fitted > table.ui.table {
+    border: 0 none
+}

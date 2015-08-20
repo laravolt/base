@@ -8,7 +8,7 @@
     <div class="ui top attached menu">
         <div class="menu">
             <div class="item borderless">
-                <h4>@lang('users.title_with_count', ['count' => $totalUsers])</h4>
+                <h4>@lang('entities.user')</h4>
             </div>
         </div>
         <div class="right menu">
@@ -20,8 +20,8 @@
             </div>
         </div>
     </div>
-    <div class="ui segment attached" style="padding: 0">
-        <table style="border: 0 none" class="ui very compact table bottom small">
+    <div class="ui segment attached fitted">
+        <table class="ui very compact table bottom small">
             <thead>
             <tr>
                 <th>@lang('users.name')</th>

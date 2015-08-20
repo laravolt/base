@@ -1,9 +1,13 @@
 <?php
 
 return [
-    'title_with_count' => 'Pengguna (:count)',
-    'registration'  => [
-        'send_email'    => 'Kirimkan email pemberitahuan',
-        'success' => 'Pengguna baru <strong>:name</strong> berhasil ditambahkan'
+    'name'         => 'Nama',
+    'email'        => 'Email',
+    'password'     => 'Sandi',
+    'status'       => 'Status',
+    'roles'        => 'Role',
+    'registration' => [
+        'send_email' => 'Kirimkan email pemberitahuan',
+        'success'    => 'Pengguna baru <strong>:name</strong> berhasil ditambahkan'
     ]
 ];
