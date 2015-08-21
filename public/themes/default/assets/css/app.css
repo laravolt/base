@@ -2,5 +2,8 @@
     padding: 0;
 }
 .ui.segment.fitted > table.ui.table {
-    border: 0 none
+    border: 0 none;
+}
+#breadcrumb {
+    margin-bottom: 20px;
 }

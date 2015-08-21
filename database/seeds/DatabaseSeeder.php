@@ -14,7 +14,9 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        factory(\App\User::class, 50)->create();
+        factory(\App\User::class, 50)->create()->each(function($user){
+            $user->attachRole(\Bican\Roles\Models\Role::whereSlug('user')->first());
+        });
 
         Model::reguard();
     }

@@ -132,6 +132,7 @@ return [
          * 3rd Party Service Providers...
          */
         'JeroenG\Packager\PackagerServiceProvider',
+        Barryvdh\Debugbar\ServiceProvider::class,
         Orchestra\Memory\MemoryServiceProvider::class,
         Orchestra\View\ViewServiceProvider::class,
         Orchestra\View\CommandServiceProvider::class,
@@ -142,6 +143,7 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         //Pingpong\Menus\MenusServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        'DaveJamesMiller\Breadcrumbs\ServiceProvider',
         /*
          * Application Service Providers...
          */
@@ -207,6 +209,8 @@ return [
         'Menu' => Caffeinated\Menus\Facades\Menu::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Breadcrumbs' => 'DaveJamesMiller\Breadcrumbs\Facade',
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

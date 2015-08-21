@@ -42,7 +42,7 @@ Route::group(['namespace' => 'Frontend'], function($router){
 
 
 // ADMIN ROUTES
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function($router){
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth'], function($router){
     $router->resource('home', 'HomeController');
     $router->resource('reports', 'ReportController');
     $router->resource('users', 'UserController');

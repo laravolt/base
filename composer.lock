@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2bad8c0b10b19b8a4e04878183e1b864",
+    "hash": "87b003593c13d3f75c148b7c957399d0",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -312,6 +312,55 @@
                 "utils"
             ],
             "time": "2015-07-23 00:54:12"
+        },
+        {
+            "name": "davejamesmiller/laravel-breadcrumbs",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davejamesmiller/laravel-breadcrumbs.git",
+                "reference": "92fee39197a6d3e2032622d501c68996ddc80d05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davejamesmiller/laravel-breadcrumbs/zipball/92fee39197a6d3e2032622d501c68996ddc80d05",
+                "reference": "92fee39197a6d3e2032622d501c68996ddc80d05",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "illuminate/view": "5.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "orchestra/testbench": "3.0.*",
+                "phpunit/phpunit": "4.*",
+                "satooshi/php-coveralls": "0.6.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DaveJamesMiller\\Breadcrumbs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Dave James Miller",
+                    "email": "dave@davejamesmiller.com",
+                    "homepage": "http://davejamesmiller.com/"
+                }
+            ],
+            "description": "A simple Laravel-style way to create breadcrumbs in Laravel 4+.",
+            "homepage": "http://laravel-breadcrumbs.davejamesmiller.com",
+            "keywords": [
+                "laravel"
+            ],
+            "time": "2015-08-17 22:13:47"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -830,7 +879,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/837080228b4b2ca0492ef5d72ec1211ba57f94e1",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/7d46e10e451e85634ff83576db6fa2c46ed718d5",
                 "reference": "837080228b4b2ca0492ef5d72ec1211ba57f94e1",
                 "shasum": ""
             },
@@ -1560,7 +1609,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/memory/zipball/964e077a5b03e66862b12b84d31064c6ae187bfd",
+                "url": "https://api.github.com/repos/orchestral/memory/zipball/b36cb7adcac2f119022794671774316f105ba3db",
                 "reference": "964e077a5b03e66862b12b84d31064c6ae187bfd",
                 "shasum": ""
             },
@@ -3397,7 +3446,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9b7417edaf28059ea63d86be941e6004dbfcc0cc",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a7df5a5b2d68fcf5ba36a223bde077157ef88fc7",
                 "reference": "9b7417edaf28059ea63d86be941e6004dbfcc0cc",
                 "shasum": ""
             },
@@ -3942,7 +3991,8 @@
     "stability-flags": {
         "laravolt/votee": 20,
         "laravolt/mural": 20,
-        "myclabs/php-enum": 20
+        "myclabs/php-enum": 20,
+        "davejamesmiller/laravel-breadcrumbs": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -16,7 +16,7 @@ class SeedUsers extends Migration
         $admin = Role::create(['name' => 'Admin', 'slug' => 'admin', 'description' => 'Administrator aplikasi']);
         $user = Role::create(['name' => 'User', 'slug' => 'user', 'description' => 'User biasa']);
 
-        $user = \App\User::create(['name' => 'Root', 'email' => 'root@email.com', 'password' => bcrypt('root')]);
+        $user = \App\User::create(['name' => 'Root', 'email' => 'root@email.com', 'password' => 'root']);
 
         $user->attachRole($root);
 

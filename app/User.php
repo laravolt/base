@@ -37,7 +37,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     protected function getRolesAsTextAttribute()
     {
-        return $this->roles()->get()->implode('name', ',');
+        return $this->roles()->get()->implode('name', ', ');
     }
 
     protected function setPasswordAttribute($value)

@@ -1,5 +1,14 @@
 @extends('admin.layouts.main')
 
+@section('topmenu')
+    <div class="ui breadcrumb" id="breadcrumb">
+        <a class="section">Admin</a>
+        <div class="divider"> / </div>
+        <div class="active section">Pengguna</div>
+    </div>
+@endsection
+
+
 @section('sidemenu')
     @include('admin.users.menu')
 @endsection
@@ -12,9 +21,27 @@
             </div>
         </div>
         <div class="right menu">
+            <div class="ui dropdown item">
+                <div class="text">Semua Status</div> <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="" class="item">Semua (90)</a>
+                    @foreach(\App\Enum\UserStatus::values() as $key=>$value)
+                        <a href="" class="item">{{ $value }}</a>
+                    @endforeach
+                </div>
+            </div>
+            <div class="ui dropdown item">
+                Semua Role <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="" class="item">Semua (90)</a>
+                    @foreach(\App\Enum\UserStatus::values() as $key=>$value)
+                        <a href="" class="item">{{ $value }}</a>
+                    @endforeach
+                </div>
+            </div>
             <div class="ui right aligned item">
                 <div class="ui transparent icon input">
-                    <input class="prompt" type="text" placeholder="@lang('users.search')">
+                    <input class="prompt" type="text" placeholder="@lang('users.action.search')">
                     <i class="search link icon"></i>
                 </div>
             </div>
@@ -27,36 +54,22 @@
                 <th>@lang('users.name')</th>
                 <th>@lang('users.email')</th>
                 <th>@lang('users.roles')</th>
-                <th>&nbsp;</th>
             </tr>
             </thead>
             <tbody>
             @foreach($users as $user)
                 <tr>
-                    <td>{{ $user['name'] }}</td>
+                    <td>
+                        <a href="{{ route('admin.users.edit', $user['id']) }}" class="">{{ $user['name'] }}</a>
+                    </td>
                     <td>{{ $user['email'] }}</td>
                     <td>{{ $user['roles_as_text'] }}</td>
-                    <td style="width: 100px" class="center aligned">
-                        <a href="{{ route('admin.users.edit') }}" class="ui button basic compact small">@lang('users.edit')</a>
-                        {{--<div class="ui icon buttons">--}}
-                        {{--<div class="ui top right pointing dropdown button basic small">--}}
-                        {{--<i class="setting icon"></i>--}}
-
-                        {{--<div class="menu">--}}
-                        {{--<a href="{{ route('admin.users.edit', $user['id']) }}" class="item">@lang('users.edit_profile')</a>--}}
-                        {{--<div class="item">@lang('users.reset_password')</div>--}}
-                        {{--<div class="divider"></div>--}}
-                        {{--<div class="item"><i class="delete icon"></i> @lang('users.delete')</div>--}}
-                        {{--</div>--}}
-                        {{--</div>--}}
-                        {{--</div>--}}
-                    </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
     </div>
-    <div class="ui menu attached bottom">
+    <div class="ui menu bottom attached">
         <div class="item borderless">
             <small>Menampilkan 1-10 dari total 50</small>
         </div>

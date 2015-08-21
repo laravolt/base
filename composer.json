@@ -17,7 +17,8 @@
         "bosnadev/repositories": " 0.*",
         "laravolt/mural": "^1.0@dev",
         "myclabs/php-enum": "dev-master",
-        "laravelcollective/html": "5.1.*"
+        "laravelcollective/html": "5.1.*",
+        "davejamesmiller/laravel-breadcrumbs": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

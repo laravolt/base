@@ -14,4 +14,42 @@ class UserRepository extends BaseRepository
     {
         return User::class;
     }
+
+    /**
+     * @param array $data
+     * @param array $roles
+     * @return mixed
+     */
+    public function createWithRoles(array $data, array $roles)
+    {
+        $user =  parent::create($data);
+        collect($roles)->each(function($role) use ($user){
+            $user->attachRole($role);
+        });
+
+        return $user;
+    }
+
+    /**
+     * @param $id
+     * @param array $data
+     * @param array $roles
+     * @return mixed
+     */
+    public function updateWithRoles($id, array $data, array $roles)
+    {
+        $user = $this->find($id);
+        $updated = parent::update($data, $id);
+
+        if($updated) {
+            $user->detachAllRoles();
+            collect($roles)->each(function($role) use ($user){
+                $user->attachRole($role);
+            });
+        }
+
+        return $user;
+    }
+
+
 }

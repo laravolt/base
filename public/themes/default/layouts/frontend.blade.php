@@ -3,8 +3,7 @@
 @section('body')
     @include('frontend.elements.header')
 
-    <div id="main-content" style="margin: 100px 0; min-height: 400px">
-
+    <div id="main-content">
         @include('elements.flash')
 
         @yield('content')

@@ -19,9 +19,8 @@ class AdminMenuMiddleware
         Menu::make('admin', function($menu) {
             $menu->add(trans('menus.admin.home'), route('admin.home.index'))->data(['icon' => 'home']);
             $menu->add(trans('menus.admin.reports'), route('admin.reports.index'))->data(['icon' => 'bar chart']);
-            $menu->add(trans('menus.admin.users'), route('admin.users.index'))->data(['icon' => 'user']);
+            $menu->add(trans('menus.admin.users'), route('admin.users.index'))->data(['icon' => 'user'])->active('admin/users*');
             $menu->add(trans('menus.admin.settings'), route('admin.settings.index'))->data(['icon' => 'setting']);
-            $menu->add(trans('menus.admin.logout'), url('auth/logout'))->data(['icon' => 'sign out']);
         });
 
         return $next($request);
