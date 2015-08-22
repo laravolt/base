@@ -8,9 +8,9 @@
         <div class="ui grid" style="margin-top: 20px">
             <div class="sixteen wide column">
                 {!! Breadcrumbs::renderIfExists() !!}
+                @include('elements.flash')
             </div>
             <div class="twelve wide column" style="padding-top: 0px">
-                @include('elements.flash')
                 @yield('content')
             </div>
             <div class="four wide column" style="padding-top: 0px">

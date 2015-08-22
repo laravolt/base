@@ -1,8 +1,8 @@
 <div class="ui menu small attached">
     <div class="ui container">
+        <a href="{{ url('/') }}" class="item"><i class="long arrow left icon"></i> Frontend</a>
         <div class="header item">
-            <img class="image avatar ui" src="{{ theme_asset('img/logo-laravolt.png') }}">
-            LARAVOLT
+            <img class="image mini ui" src="{{ theme_asset('img/logo-laravolt.png') }}">
         </div>
 
         @foreach (Menu::get('admin')->all() as $item)

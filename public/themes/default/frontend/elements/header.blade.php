@@ -12,14 +12,14 @@
 
         <div class="menu right">
             @if(auth()->check())
-                <div class="ui pointing link dropdown item">
+                <div class="ui pointing dropdown item">
                     <a href="">
                         {{ auth()->user()->name }} <i class="dropdown icon"></i>
                     </a>
-                    <div class="menu">
-                        <div class="item">Link Item</div>
-                        <div class="item">Link Item</div>
+                    <div class="menu small">
+                        <a href="{{ auth()->user()->permalink }}" class="item">Your Profile &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         <div class="divider"></div>
+                        <a href="{{ route('my.profile.index') }}" class="item">Settings</a>
                         <a href="{{ url('auth/logout') }}" class="item">Logout</a>
                     </div>
                 </div>

@@ -40,6 +40,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->roles()->get()->implode('name', ', ');
     }
 
+    protected function getPermalinkAttribute()
+    {
+        return route('users.show', $this->id);
+    }
+
     protected function setPasswordAttribute($value)
     {
         $this->attributes['password'] = bcrypt($value);

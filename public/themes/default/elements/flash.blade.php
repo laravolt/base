@@ -1,5 +1,6 @@
 @if (count($errors) > 0)
     <div class="ui error message">
+        <i class="close icon"></i>
         <div class="header">
             {{ trans('form.failed') }}
         </div>
@@ -19,9 +20,8 @@
             $level = 'error';
         }
     ?>
-    <div style="" class="ui container">
-        <div class="ui message {{ $level }}" style="text-align: center;">
-            {!! Session::get('flash_notification.message') !!}
-        </div>
+    <div class="ui message {{ $level }}" style="text-align: center;">
+        <i class="close icon"></i>
+        {!! Session::get('flash_notification.message') !!}
     </div>
 @endif

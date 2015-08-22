@@ -40,7 +40,7 @@
 
 @section('content')
 
-    <div class="ui top attached tabular menu">
+    <div class="ui top attached small menu">
         <a class="item active" data-tab="profile">Profil</a>
         <a class="item" data-tab="account">Akun</a>
         <a class="item" data-tab="email">Email</a>

@@ -40,6 +40,16 @@ Route::group(['namespace' => 'Frontend'], function($router){
     Route::resource('posts', 'PostController');
 });
 
+Route::group(['namespace' => 'Frontend', 'prefix' => '', 'middleware' => ''], function($router){
+    $router->resource('users', 'UserController');
+});
+
+// BACKEND ROUTES
+Route::group(['namespace' => 'My', 'prefix' => 'my', 'middleware' => 'auth'], function($router){
+    $router->resource('profile', 'ProfileController');
+    $router->resource('account', 'AccountController');
+    $router->resource('email', 'EmailController');
+});
 
 // ADMIN ROUTES
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth'], function($router){
