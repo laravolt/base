@@ -49,6 +49,7 @@ Route::group(['namespace' => 'My', 'prefix' => 'my', 'middleware' => 'auth'], fu
     $router->resource('profile', 'ProfileController');
     $router->resource('account', 'AccountController');
     $router->resource('email', 'EmailController');
+    $router->resource('log', 'LogController');
 });
 
 // ADMIN ROUTES

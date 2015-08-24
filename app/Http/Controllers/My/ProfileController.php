@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class ProfileController extends Controller
+class ProfileController extends MyController
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('my.profile.index');
+        $user = auth()->user();
+        return view('my.profile.index', compact('user'));
     }
 
     /**

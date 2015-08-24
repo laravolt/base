@@ -9,16 +9,16 @@
     {{ csrf_field() }}
 
     <div class="field">
-        <label>@lang('users.name')</label>
-        {!! Form::text('name', old('name', $user['name'])) !!}
+        <label>@lang('users.password.current')</label>
+        {!! Form::text('current') !!}
     </div>
     <div class="field">
-        <label>@lang('users.about')</label>
-        {!! Form::text('about', old('about', $user['about'])) !!}
+        <label>@lang('users.password.new')</label>
+        {!! Form::text('new') !!}
     </div>
     <div class="field">
-        <label>@lang('users.website')</label>
-        {!! Form::text('website', old('website', $user['website'])) !!}
+        <label>@lang('users.password.new_confirm')</label>
+        {!! Form::text('new_confirmed') !!}
     </div>
     <div class="ui divider hidden"></div>
     <button class="ui button" type="submit" name="submit" value="1">@lang('form.save')</button>
