@@ -48,11 +48,19 @@ h1, h2, h3, h4, h5, .ui.menu {
 #topmenu a.item {
     color: #fff;
 }
-
 #topmenu .ui.button {
     background-color: #bb332b;
     color: #fff;
 }
+#topmenu a.item.active {
+    color: #ffc44c;
+    background-color: transparent;
+}
+#topmenu a.item.active .ui.button{
+    background-color: #ffc44c;
+    color: #d13930;
+}
+
 
 #welcome {
     background-color: #d13930;
@@ -87,8 +95,36 @@ h1, h2, h3, h4, h5, .ui.menu {
     font-weight: bold;
 }
 
+.title {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #dc4b42;
+    border-bottom: 4px solid #d6362c;
+}
+h2.ui.header {
+    font-size: 1.5em;
+    font-family: 'AgroLightCondensed', sans-serif;
+    color: #fff;
+    padding: 10px 0 5px;
+}
+h2.ui.header strong {
+    color: #ffe034;
+}
 
-.ui.modal .title {
+.ui.button.primary {
+    background-color: #5fc0f2;
+    box-shadow: 2px 4px 0 0 #3287b2;
+    text-shadow: 0px 1px #3287b2;
+}
+
+.ui.button.red {
+    background-color: #ca372e;
+    box-shadow: 2px 4px 0 0 #952922;
+    text-shadow: 0px 1px #952922;
+    color: #fecc34;
+}
+
+.ui.modal .header {
     text-transform: uppercase;
     font-family: AgroCondensed;
     color: #6e9e43;
@@ -97,6 +133,6 @@ h1, h2, h3, h4, h5, .ui.menu {
     background-color: #fffffa;
 }
 
-.ui.modal .ui.segments {
+.ui.modal .ui.segments, .ui.modal .ui.segment {
     border-color: #fecc34;
 }

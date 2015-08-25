@@ -2,7 +2,7 @@
     <div class="content">
         <div class="ui segments">
             <div class="ui segment center aligned">
-                <h3 class="title">Syarat & Ketentuan</h3>
+                <h3 class="header">Syarat & Ketentuan</h3>
             </div>
             <div class=" ui segment">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consequatur consequuntur cum debitis itaque, minima, nesciunt odio officiis quis quod reiciendis repellat sed tempore temporibus tenetur? Aperiam dolores natus repellat.
