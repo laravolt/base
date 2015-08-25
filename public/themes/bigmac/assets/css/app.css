@@ -105,6 +105,18 @@ h1, h2, h3, h4, h5, .ui.menu {
     padding: 2px;
 }
 
+#page-mechanism .ui.segment.outer {
+    background-color: #fffffa;
+    padding: 4px;
+    box-shadow: none;
+    border: 0 none;
+}
+#page-mechanism .ui.segment.inner {
+    background-color: #fffffa;
+    border-color: #fecc34;
+    box-shadow: none;
+}
+
 .title {
     text-align: center;
     padding: 5px 0;
