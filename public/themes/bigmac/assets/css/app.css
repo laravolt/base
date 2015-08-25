@@ -1,3 +1,40 @@
+#frontend {
+    background-color: #ffc44c;
+}
+#header {
+    background-color: #bb332b;
+    border: 0 none;
+}
 #topmenu {
     font-size: .75em;
+    background-color: #d13930;
+    border-bottom: 4px solid #c0261d;
+    padding: 10px 0;
+}
+#topmenu a.item {
+    color: #fff;
+}
+
+#topmenu .ui.button {
+    background-color: #bb332b;
+    color: #fff;
+}
+
+#welcome {
+    background-color: #d13930;
+    margin: 0 auto;
+    color: #fff;
+    text-transform: uppercase;
+}
+#welcome label {
+    color: #fff;
+}
+#welcome a {
+    color: #ffe034;
+}
+
+#footer {
+    color: #6c4848;
+    font-size: .9em;
+    font-weight: bold;
 }
