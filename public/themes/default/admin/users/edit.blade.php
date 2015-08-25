@@ -55,15 +55,15 @@
         {{ csrf_field() }}
 
         <div class="field">
-            <label>@lang('users.name')</label>
+            <label>@lang('user.name')</label>
             {!! Form::text('name', old('name', $user['name'])) !!}
         </div>
         <div class="field">
-            <label>@lang('users.email')</label>
+            <label>@lang('user.email')</label>
             {!! Form::text('email', old('email', $user['email'])) !!}
         </div>
         <div class="field">
-            <label for="fruit">@lang('users.roles')</label>
+            <label for="fruit">@lang('user.roles')</label>
 
             <div class="inline fields">
                 @foreach($roles as $key=>$value)
@@ -81,7 +81,7 @@
             </div>
         </div>
         <div class="field">
-            <label>@lang('users.status')</label>
+            <label>@lang('user.status')</label>
             {!! Form::select('status', \App\Enum\UserStatus::values(), old('status'), ['class' => 'ui dropdown']) !!}
         </div>
 

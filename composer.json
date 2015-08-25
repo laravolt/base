@@ -31,6 +31,7 @@
             "database"
         ],
         "psr-4": {
+            "Javan\\Bigmac\\": "packages/Javan/Bigmac/src",
             "Laravolt\\Support\\": "packages/Laravolt/Support/src",
             "App\\": "app/"
         }

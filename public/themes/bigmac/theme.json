@@ -1,0 +1,6 @@
+{
+  "name": "Big Mac",
+  "description": "McDonalds BIG MAC campaign",
+  "author": "Bayu Hendra Winata",
+  "autoload": ["helpers.php"]
+}

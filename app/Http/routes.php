@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home.index');
-});
-
-Route::get('home', function () {
-    return redirect('/');
-});
+//Route::get('/', function () {
+//    return view('frontend.home.index');
+//});
+//
+//Route::get('home', function () {
+//    return redirect('/');
+//});
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');

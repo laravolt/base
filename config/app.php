@@ -150,6 +150,8 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Javan\Bigmac\BigmacServiceProvider::class,
         Laravolt\Support\SupportServiceProvider::class,
 
 

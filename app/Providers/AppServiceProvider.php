@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         (new LoadCurrentTheme())->bootstrap($this->app);
-        Theme::setTheme('default');
+        Theme::setTheme('bigmac');
     }
 
     /**
