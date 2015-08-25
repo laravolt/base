@@ -89,6 +89,7 @@ h1, h2, h3, h4, h5, .ui.menu {
     color: #fff;
     font-size: .9em;
     font-family: AgroLightCondensed;
+    cursor: pointer;
 }
 #welcome label a {
     text-decoration: underline;
