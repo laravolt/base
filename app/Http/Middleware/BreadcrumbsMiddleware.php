@@ -22,7 +22,7 @@ class BreadcrumbsMiddleware
 
         Breadcrumbs::register('admin.users.index', function ($breadcrumbs) {
             $breadcrumbs->parent('home');
-            $breadcrumbs->push(trans('entities.users'), route('admin.users.index'));
+            $breadcrumbs->push(trans('entities.user'), route('admin.users.index'));
         });
 
         Breadcrumbs::register('admin.users.edit', function ($breadcrumbs, $user) {
@@ -35,6 +35,10 @@ class BreadcrumbsMiddleware
             $breadcrumbs->push(trans('actions.add'));
         });
 
+        Breadcrumbs::register('admin.reports.index', function ($breadcrumbs) {
+            $breadcrumbs->parent('home');
+            $breadcrumbs->push(trans('menu.admin.reports'));
+        });
 
         return $next($request);
     }

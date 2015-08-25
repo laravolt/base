@@ -1,14 +1,12 @@
 <div class="ui menu small attached">
     <div class="ui container">
-        <a href="{{ url('/') }}" class="item"><i class="long arrow left icon"></i> Frontend</a>
-        <div class="header item">
-            <img class="image mini ui" src="{{ theme_asset('img/logo-laravolt.png') }}">
-        </div>
+        <a href="{{ route('admin.home.index') }}" class="item icon"><i class="icon home"></i></a>
 
         @foreach (Menu::get('admin')->all() as $item)
-            <a href="{{ $item->url() }}" class="item"><i class="{{ $item->icon }} icon"></i> {{ $item->title }}</a>
+            <a href="{{ $item->url() }}" class="item {{ $item->active?'active':'' }}"><i class="{{ $item->icon }} icon"></i> {{ $item->title }}</a>
         @endforeach
         <div class="menu right">
+            <a href="{{ url('/') }}" class="item borderless"><i class="long arrow left icon"></i> Lihat Frontend</a>
             <div class="ui pointing link dropdown item borderless">
                 <img class="ui avatar image" src="https://s3.amazonaws.com/uifaces/faces/twitter/teleject/24.jpg" alt="">
                 {{ auth()->user()->name }} <i class="dropdown icon"></i>

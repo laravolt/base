@@ -21,27 +21,27 @@
             </div>
         </div>
         <div class="right menu">
-            <div class="ui dropdown item">
-                <div class="text">Semua Status</div> <i class="dropdown icon"></i>
-                <div class="menu">
-                    <a href="" class="item">Semua (90)</a>
-                    @foreach(\App\Enum\UserStatus::values() as $key=>$value)
-                        <a href="" class="item">{{ $value }}</a>
-                    @endforeach
-                </div>
-            </div>
-            <div class="ui dropdown item">
-                Semua Role <i class="dropdown icon"></i>
-                <div class="menu">
-                    <a href="" class="item">Semua (90)</a>
-                    @foreach(\App\Enum\UserStatus::values() as $key=>$value)
-                        <a href="" class="item">{{ $value }}</a>
-                    @endforeach
-                </div>
-            </div>
+            {{--<div class="ui dropdown item">--}}
+                {{--<div class="text">Semua Status</div> <i class="dropdown icon"></i>--}}
+                {{--<div class="menu">--}}
+                    {{--<a href="" class="item">Semua (90)</a>--}}
+                    {{--@foreach(\App\Enum\UserStatus::values() as $key=>$value)--}}
+                        {{--<a href="" class="item">{{ $value }}</a>--}}
+                    {{--@endforeach--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="ui dropdown item">--}}
+                {{--Semua Role <i class="dropdown icon"></i>--}}
+                {{--<div class="menu">--}}
+                    {{--<a href="" class="item">Semua (90)</a>--}}
+                    {{--@foreach(\App\Enum\UserStatus::values() as $key=>$value)--}}
+                        {{--<a href="" class="item">{{ $value }}</a>--}}
+                    {{--@endforeach--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <div class="ui right aligned item">
                 <div class="ui transparent icon input">
-                    <input class="prompt" type="text" placeholder="@lang('users.action.search')">
+                    <input class="prompt" type="text" placeholder="@lang('action.search')">
                     <i class="search link icon"></i>
                 </div>
             </div>
@@ -51,9 +51,10 @@
         <table class="ui very compact table bottom small">
             <thead>
             <tr>
-                <th>@lang('users.name')</th>
-                <th>@lang('users.email')</th>
-                <th>@lang('users.roles')</th>
+                <th>@lang('user.name')</th>
+                <th>@lang('user.email')</th>
+                <th>@lang('user.roles')</th>
+                <th class="ui right aligned">@lang('user.registered')</th>
             </tr>
             </thead>
             <tbody>
@@ -64,6 +65,7 @@
                     </td>
                     <td>{{ $user['email'] }}</td>
                     <td>{{ $user['roles_as_text'] }}</td>
+                    <td class="ui right aligned">{{ $user['registered_date'] }}</td>
                 </tr>
             @endforeach
             </tbody>
@@ -71,7 +73,7 @@
     </div>
     <div class="ui menu bottom attached">
         <div class="item borderless">
-            <small>Menampilkan 1-10 dari total 50</small>
+            <small>{!! with(new \Laravolt\Support\Pagination\SemanticUiPagination($users))->summary() !!}</small>
         </div>
         {!! with(new \Laravolt\Support\Pagination\SemanticUiPagination($users))->render('attached bottom right') !!}
     </div>

@@ -45,6 +45,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return route('users.show', $this->id);
     }
 
+    protected function getRegisteredDateAttribute()
+    {
+        return $this->created_at->formatLocalized('%e %b %y');
+    }
+
     protected function setPasswordAttribute($value)
     {
         $this->attributes['password'] = bcrypt($value);

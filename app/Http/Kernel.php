@@ -18,7 +18,7 @@ class Kernel extends HttpKernel
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         \App\Http\Middleware\VerifyCsrfToken::class,
-        \App\Http\Middleware\AdminMenuMiddleware::class,
+        \App\Http\Middleware\Menus\Admin::class,
         \App\Http\Middleware\BreadcrumbsMiddleware::class,
     ];
 
@@ -31,6 +31,7 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'menus.my' => \App\Http\Middleware\Menus\My::class
+        'menus.my' => \App\Http\Middleware\Menus\My::class,
+        'menus.my.dropdown' => \App\Http\Middleware\Menus\MyDropdown::class,
     ];
 }

@@ -9,9 +9,8 @@ use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class UserController extends AdminController
 {
     /**
      * @var UserRepository
@@ -114,8 +113,7 @@ class UserController extends Controller
         $user = $this->user->updateWithRoles($id, $request->only('name', 'email', 'status'), $request->get('roles', []));
 
         if ($user) {
-            flash()->success(trans('users.update.success', ['name' => $user['name']]));
-            return redirect()->route('admin.users.index');
+            flash()->success(trans('flash.user.updated', ['name' => $user['name']]));
         }
         return redirect()->back();
     }

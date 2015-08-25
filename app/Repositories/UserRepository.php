@@ -38,7 +38,11 @@ class UserRepository extends BaseRepository
      */
     public function updateWithRoles($id, array $data, array $roles)
     {
-        $user = $this->find($id);
+        $user = $id;
+
+        if(! $user instanceof User) {
+            $user = $this->find($id);
+        }
         $updated = parent::update($data, $id);
 
         if($updated) {
