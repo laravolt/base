@@ -52,6 +52,14 @@ h1, h2, h3, h4, h5, .ui.menu {
     background-color: #bb332b;
     color: #fff;
 }
+#topmenu .ui.icon.button {
+    padding: .7em .9em;;
+}
+#topmenu .ui.icon.button > .icon {
+    font-size: 1.5em;
+    padding: .1em 0 0 0;
+    margin: .1em 0 .1em 0;
+}
 #topmenu a.item.active {
     color: #ffc44c;
     background-color: transparent;
