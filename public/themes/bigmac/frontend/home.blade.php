@@ -1,10 +1,12 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <img src="https://placehold.it/800x300" alt="" class="ui centered image">
-    <div class="ui segment basic padded" id="welcome">
-        <div class="box">
-            <h2>Ayo ikutan bikin meme seru <strong>big day</strong> versi kalian sendiri</h2>
+    <div style="background: transparent url('{{ theme_asset('img/background-home.png') }}') no-repeat center center; background-size: cover">
+        <img src="{{ theme_asset('img/foreground-home.png') }}" alt="" class="ui centered image">
+    </div>
+    <div class="ui segment basic" id="welcome">
+        <div class="box ui segment basic">
+            <h2 class="headline">Ayo ikutan bikin meme seru <strong>big day</strong> versi kalian sendiri</h2>
             <form class="ui form" id="form-start">
                 <div class="inline field">
                     <div class="ui checkbox">
