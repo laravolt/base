@@ -95,11 +95,22 @@ h1, h2, h3, h4, h5, .ui.menu {
     font-weight: bold;
 }
 
+@media only screen and (max-width: 767px) {
+    #page-gallery .ui.container {
+        margin-left: 4px !important;
+        margin-right: 4px !important;;
+    }
+}
+#page-gallery .column{
+    padding: 2px;
+}
+
 .title {
     text-align: center;
     padding: 5px 0;
     background-color: #dc4b42;
     border-bottom: 4px solid #d6362c;
+    margin-bottom: 10px;
 }
 h2.ui.header {
     font-size: 1.5em;
