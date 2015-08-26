@@ -69,7 +69,6 @@ h1, h2, h3, h4, h5, .ui.menu {
     color: #d13930;
 }
 
-
 #welcome {
     background-color: #d13930;
     margin: 0 auto;
@@ -124,6 +123,45 @@ h1, h2, h3, h4, h5, .ui.menu {
     background-color: #fffffa;
     border-color: #fecc34;
     box-shadow: none;
+}
+
+#builder h2.ui.header {
+    color: #fecc34;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0px;
+    width: 200px;
+    margin: auto;
+    z-index: 1000;
+    text-align: center;
+    left: 40%;
+}
+
+/*mobile*/
+@media only screen and (max-width: 380px) {
+    #builder h2.ui.header {
+        left: 23%;
+    }
+}
+@media only screen and (min-width: 381px) and (max-width: 767px) {
+    #builder h2.ui.header {
+        left: 26%;
+    }
+}
+
+/*tablet*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #builder h2.ui.header {
+        left: 38%;
+    }
+}
+
+#menu-builder {
+    background-color: #d13930;
+    border-bottom: 4px solid #c0261d;
+}
+#menu-builder .item {
+    color: #fff;
 }
 
 .title {
